@@ -1,12 +1,10 @@
 import './App.css';
+// import Users from './components/Users'
+import Router from './config/router'
 
 function App() {
   return (
-    <div className="App">
-      <h1>
-        Task Manager
-      </h1>
-    </div>
+    <Router />
   );
 }
 
