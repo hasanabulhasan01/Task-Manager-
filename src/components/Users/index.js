@@ -2,8 +2,11 @@ import './index.css'
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
+
 
 function Users() {
+    const navigate = useNavigate();
     const [usersData, setUsersData] = useState([])
     const [loading, setLoading] = useState(false);
 
@@ -40,7 +43,7 @@ function Users() {
                         <li
                             key={user.id}
                             className="user"
-                        // onClick={}
+                        onClick={() => navigate(`/Tasks/${user.id}`)}
                         >
                             {user.name}
                         </li>
