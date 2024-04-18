@@ -31,7 +31,7 @@ function Users() {
         <>
             <div className="header">
                 <h2 className='logo'>Task Manager</h2>
-                <span className='fetch-btn' onClick={handleFetchUsers}>Fetch Users</span>
+                <button className='fetch-btn' onClick={handleFetchUsers}>Fetch Users</button>
             </div>
 
             <div className='user-section'>

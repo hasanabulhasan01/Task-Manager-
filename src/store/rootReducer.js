@@ -3,7 +3,7 @@ import taskSlice from "./taskSlice";
 
 
 const rootReducer = combineReducers({
-    taskReducer: taskSlice.reducer,
+    tasksList: taskSlice.reducer,
 })
 
 export default rootReducer;
