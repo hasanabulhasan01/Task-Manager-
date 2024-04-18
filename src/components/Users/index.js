@@ -43,7 +43,7 @@ function Users() {
                         <li
                             key={user.id}
                             className="user"
-                        onClick={() => navigate(`/Tasks/${user.id}`)}
+                        onClick={() => navigate(`/Tasks/${user.name}/${user.id}`)}
                         >
                             {user.name}
                         </li>

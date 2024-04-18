@@ -9,7 +9,7 @@ const router = createBrowserRouter([
       element: <Users />,
     },
     {
-      path: "/Tasks/:id",
+      path: "/Tasks/:userName/:userId",
       element: <Tasks />,
     },
 

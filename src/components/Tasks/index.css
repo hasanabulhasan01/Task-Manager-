@@ -1,0 +1,33 @@
+.Nav{
+    width: 100vw;
+    height: 60px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userName{
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 25px;
+    color: rgb(2, 2, 207);
+}
+.addTask-btn{
+    height: 40px;
+    width: 100px;
+    margin-right: 40px;
+    background-color: rgb(18, 18, 221);
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
+.addTask-btn:hover{
+    cursor: pointer;
+}
+.addTask-btn:active{
+    transform: scale(0.97);
+}

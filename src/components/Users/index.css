@@ -35,12 +35,14 @@
     margin-left: 60px;
     letter-spacing: 1px;
     color: rgb(153, 146, 146);
+    font-size: 18px;
 }
 .user{
     /* text-decoration: none; */
     margin: 30px;
     letter-spacing: 1px;
     font-weight: 600;
+    font-size: 17px;
 }
 .user:hover{
     cursor: pointer;
