@@ -11,14 +11,18 @@ const taskSlice = createSlice({
         console.log('Current State:', state.tasks);
         state.tasksList = [...state.tasksList, action.payload.task];
       },
-    // deleteTask: (state, action) => {
-    //   state.tasks = state.tasks.filter((task) => task.id !== action.payload);
-    // },
-    // updateTask: (state, action) => {
-    //   state.tasks = state.tasks.map((task) =>
-    //     task.id === action.payload.taskId ? action.payload.updatedTask : task
-    //   );
-    // },
+      deleteTask: (state, action) => {
+        const taskIdToDelete = action.payload;
+        const indexToDelete = state.tasksList.findIndex((task) => task.id === taskIdToDelete);
+        if (indexToDelete !== -1) {
+          state.tasksList.splice(indexToDelete, 1);
+        }
+      },
+    updateTask: (state, action) => {
+      state.tasksList = state.tasksList.map((task) =>
+        task.id === action.payload.taskId ? action.payload.updatedTask : task
+      );
+    },
   },
 });
 
