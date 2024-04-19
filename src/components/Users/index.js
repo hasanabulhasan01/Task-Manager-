@@ -19,10 +19,15 @@ function Users() {
             const users = await response.json();
             console.log("User Data.....", users);
             setUsersData(users);
+            toast.dark("Users Fetched Successfully",{
+                autoClose: 1000,
+            });
             setLoading(false);
         } catch (error) {
             console.error("Error fetching users data:", error);
-            toast.dark("Error Fetching User Data");
+            toast.dark("Error Fetching User Data",{
+                autoClose: 2000,
+            });
             setLoading(false);
         }
     };

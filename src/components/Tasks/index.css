@@ -64,3 +64,10 @@
     padding-left: 12px!important;
     cursor: pointer;
   }
+
+  .no-task{
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+    margin-top: 20px;
+  }

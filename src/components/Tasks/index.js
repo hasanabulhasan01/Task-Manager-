@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTask, deleteTask, updateTask } from "../../store/taskSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Tasks() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -42,15 +44,24 @@ function Tasks() {
 
   const addNewTask = (newTask) => {
     dispatch(addTask({ task: newTask }));
+    toast.dark("Task Added Successfully",{
+      autoClose: 2000,
+    });
   };
 
   const handleDeleteTask = (taskId) => {
     dispatch(deleteTask(taskId));
+    toast.dark("Task Deleted Successfully",{
+      autoClose: 2000,
+    });
   };
 
   const handleUpdateTask = (task) => {
     dispatch(updateTask({ taskId: task.id, updatedTask: task }));
     closeUpdateModal();
+    toast.dark("Task Updated Successfully",{
+      autoClose: 2000,
+    });
   };
 
   return (
@@ -102,7 +113,7 @@ function Tasks() {
             </tbody>
           </table>
         ) : (
-          <p>No tasks available.</p>
+          <p className="no-task">No tasks available.</p>
         )}
       </div>
       {updateModalIsOpen && (
@@ -113,6 +124,7 @@ function Tasks() {
           handleUpdate={handleUpdateTask}
         />
       )}
+      <ToastContainer />
     </>
   );
 }
