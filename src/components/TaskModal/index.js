@@ -31,16 +31,22 @@ function TaskModal({ isOpen, closeModal, addNewTask, userId }) {
     closeModal();
   };
 
+  const handleCloseModal = () => {
+    closeModal()
+    setTaskName('');
+    setDeadLine('');
+  }
+
   return (
     <Modal isOpen={isOpen} onRequestClose={closeModal} style={customStyles}>
       <h2>Add Task</h2>
       <form>
           <input className='modal-input' placeholder='Enter Your Task Here' type="text" value={taskName} onChange={(e) => setTaskName(e.target.value)} />
         <br />
-          <input className='modal-input' placeholder='Enter Deadline' type="text" value={deadLine} onChange={(e) => setDeadLine(e.target.value)} />
+          <input className='modal-input' placeholder='Enter Deadline' type="date" value={deadLine} onChange={(e) => setDeadLine(e.target.value)} />
         <br />
         <button className='modal-btn' type="button" onClick={handleAddTask}>Add</button>
-        <button className='modal-btn' type="button" onClick={closeModal}>Cancel</button>
+        <button className='modal-btn' type="button" onClick={handleCloseModal}>Cancel</button>
       </form>
     </Modal>
   );

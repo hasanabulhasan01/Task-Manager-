@@ -7,8 +7,8 @@ const taskSlice = createSlice({
   },
   reducers: {
     addTask: (state, action) => {
-        console.log('Payload:', action.payload);
-        console.log('Current State:', state.tasks);
+        // console.log('Payload:', action.payload);
+        // console.log('Current State:', state.tasks);
         state.tasksList = [...state.tasksList, action.payload.task];
       },
       deleteTask: (state, action) => {

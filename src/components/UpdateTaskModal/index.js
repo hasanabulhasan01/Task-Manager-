@@ -26,7 +26,7 @@ const customStyles = {
         const updatedTask = {
           ...task,
           name: updatedTaskName,
-          deadline: updatedDeadLine,
+          deadLine: updatedDeadLine,
         };
         handleUpdate(updatedTask);
         closeModal();
@@ -38,7 +38,7 @@ const customStyles = {
         <form>
             <input className='modal-input' placeholder='Enter Your Task Here' type="text" value={updatedTaskName} onChange={(e) => setUpdatedTaskName(e.target.value)} />
           <br />
-            <input className='modal-input' placeholder='Enter Deadline' type="text" value={updatedDeadLine} onChange={(e) => setUpdatedDeadLine(e.target.value)} />
+            <input className='modal-input' placeholder='Enter Deadline' type="date" value={updatedDeadLine} onChange={(e) => setUpdatedDeadLine(e.target.value)} />
           <br />
           <button className='modal-btn' type="button" onClick={handleUpdateTask}>Update</button>
           <button className='modal-btn' type="button" onClick={closeModal}>Cancel</button>
